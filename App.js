@@ -1,12 +1,13 @@
 import React from "react";
-import { View } from "react-native";
-import AccountScreen from "./app/screens/AccountScreen";
-import ListingDetailsScreen from "./app/screens/ListingDetailsScreen";
-import ListingsScreen from "./app/screens/ListingsScreen";
+import { NavigationContainer } from "@react-navigation/native";
 
-import ViewImageScreen from "./app/screens/ViewImageScreen";
-import WelcomeScreen from "./app/screens/WelcomeScreen";
+import navigationTheme from "./app/navigation/navigationTheme";
+import AppNavigator from "./app/navigation/AppNavigator";
 
 export default function App() {
-  return <ListingsScreen />;
+  return (
+    <NavigationContainer theme={navigationTheme}>
+      <AppNavigator />
+    </NavigationContainer>
+  );
 }
